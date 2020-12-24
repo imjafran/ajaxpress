@@ -1,0 +1,115 @@
+// AjaxPress loader container
+
+.ap_container {
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+
+  &.default {
+    visibility: visible;
+    background: #2c3e50;
+    background: -webkit-linear-gradient(to right, #4ca1af, #2c3e50);
+    background: linear-gradient(to right, #4ca1af, #2c3e50);
+  }
+
+  &.dark-ocean {
+    visibility: visible;
+    background: #373b44;
+    background: -webkit-linear-gradient(to right, #4286f4, #373b44);
+    background: linear-gradient(to right, #4286f4, #373b44);
+  }
+
+  &.azur {
+    visibility: visible;
+    background: #7f7fd5;
+    background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+    background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  }
+
+  &.ultra-violate {
+    visibility: visible;
+    background: #654ea3;
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+    background: linear-gradient(to right, #eaafc8, #654ea3);
+  }
+
+  h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 0;
+    color: #f0f0f0;
+  }
+
+  .loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    div {
+      position: absolute;
+      top: 33px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+      &:nth-child(1) {
+        left: 8px;
+        animation: ap_anim1 0.6s infinite;
+      }
+      &:nth-child(2) {
+        left: 8px;
+        animation: ap_anim2 0.6s infinite;
+      }
+      &:nth-child(3) {
+        left: 32px;
+        animation: ap_anim2 0.6s infinite;
+      }
+      &:nth-child(4) {
+        left: 56px;
+        animation: ap_anim3 0.6s infinite;
+      }
+    }
+  }
+}
+
+@keyframes ap_anim1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ap_anim3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes ap_anim2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+// GNU Software License by Jafran Hasan

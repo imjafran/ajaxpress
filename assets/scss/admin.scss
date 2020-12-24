@@ -1,0 +1,131 @@
+// ajaxpress settings form
+
+$color: peru;
+$color-secondary: indianred;
+
+.ap_settings_form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .ap_button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0;
+    button {
+      cursor: pointer;
+      background: peru;
+      background: -webkit-linear-gradient(to right, $color, $color-secondary);
+      background: linear-gradient(to right, $color-secondary, $color);
+      color: #f0f0f0;
+      border-radius: 5px;
+      border: none;
+      width: 180px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 300;
+      opacity: 1;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    flex-wrap: wrap;
+
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    border-radius: 0;
+    min-height: 40px;
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    box-shadow: none;
+
+    &:focus {
+      border-color: $color;
+      box-shadow: none;
+    }
+  }
+
+  footer {
+    padding: 20px 0 0;
+    div,
+    div > a {
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: #999;
+      padding: 10px 0 0;
+      text-decoration: none;
+    }
+    a {
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+
+  .center {
+    text-align: center;
+  }
+  .icons {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    a {
+      opacity: 0.7;
+      transition: 0.3s;
+      margin-right: 10px;
+      &:last-child {
+        margin: 0;
+      }
+      svg {
+        height: 25px;
+        path {
+          fill: rgba(0, 0, 0, 0.9);
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+        svg {
+          path {
+            fill: $color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// GNU Software License by Jafran Hasan
